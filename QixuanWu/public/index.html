@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/log.css">
+    <style>
+        /* 添加居中对齐样式 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 让页面充满整个视口高度 */
+            margin: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="username-container">
+        <h2>设置用户名</h2>
+        <form id="input-form">
+            <label for="user-input">Enter your username:</label>
+            <input type="text" id="user-input" required>
+            <button type="submit" id="set-username-button">Submit</button>
+        </form>
+    </div>
+
+
+
+<script>
+  const inputForm = document.getElementById('input-form');
+  const userInput = document.getElementById('user-input');
+
+  inputForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const userList = userInput.value; // 使用不同的变量名存储用户名值
+    
+    // 存储用户名到本地存储
+    localStorage.setItem('userList', userList); // 使用不同的键名
+
+    // 跳转到聊天页面
+    window.location.href = 'chat.html'; // 这里跳转到 chat.html
+  });
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+
+</html>

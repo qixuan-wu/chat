@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/1.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 让图片充满整个背景 */
+    background-repeat: no-repeat; /* 不重复平铺图片 */
+    background-attachment: fixed;
+}
+/* 添加灰色透明底的框 */
+.username-container {
+    background-color: rgba(128, 128, 128, 0.5); /* 灰色背景，透明度为 0.5 */
+    padding: 20px; /* 添加一些内边距，使内容与边框有间隔 */
+    border-radius: 10px; /* 添加圆角边框 */
+    
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center; /* 在垂直方向上居中对齐 */
+    align-items: center; /* 在水平方向上居中对齐 */
+    margin: 0;
+}
+
+
+

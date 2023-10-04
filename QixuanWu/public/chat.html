@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socket.io simple chat</title>
+  <link rel="stylesheet" href="/css/demo.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 左边显示在线用户 -->
+    <div class="sidenav">
+      <div class="inbox__people">
+        <h4>Active users</h4>
+        <!-- 在这里列出在线用户列表 -->
+      </div>
+    </div>
+
+    <!-- 右边是聊天框和输入框 -->
+    <div class="chat-container">
+      <div class="chat">
+        <!-- 聊天消息历史 -->
+        <div class="messages__history"></div>
+        <!-- 正在输入的用户信息 -->
+        <div id="typing-status"></div>
+      </div>
+
+      <!-- 输入框和按钮 -->
+      <form class="message_form">
+        <input type="text" class="message_form__input" placeholder="Type a message" />
+        <button class="message_form__button" type="submit">Enter</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/client.js"></script>
+  <!-- <script>
+    // 在页面加载时获取存储的用户名
+    document.addEventListener('DOMContentLoaded', function () {
+      const storedUsername = localStorage.getItem('userList');
+      const usernameDisplay = document.getElementById('username-display');
+
+      // 检查是否存在存储的用户名
+      if (storedUsername) {
+        // 如果存在，将其显示在页面上
+        usernameDisplay.textContent = 'Username: ' + storedUsername;
+      } else {
+        // 如果不存在，显示默认文本或执行其他逻辑
+        usernameDisplay.textContent = 'No username found';
+      }
+    });
+  </script> -->
+</body>
+</html>
